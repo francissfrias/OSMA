@@ -1,0 +1,40 @@
+.studentlist{
+    flex: 10;
+    margin: 5px 10px 5px 10px;
+}
+.userlistDelete{
+    color:red;
+    background-color: red;
+}
+
+
+
+
+
+
+
+
+
+.addstudent{
+    height: 40px;
+    width: 100px;
+    margin-bottom: 10px;
+    margin-left: 1575px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.userAddupdateButton{
+    height: 40px;
+    width: 150px;
+   
+   
+    
+}
+.viewgrade{
+    
+    background-color: teal;
+    color: white;
+   
+    
+}

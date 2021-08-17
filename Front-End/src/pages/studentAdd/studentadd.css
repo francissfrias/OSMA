@@ -1,0 +1,155 @@
+.studentadd{
+    flex: 10;
+    margin: 5px 10px 5px 10px;
+
+}
+
+.userTitleContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+    
+}
+.userupdatebutton{
+    margin-top: 10px;
+    
+    align-items:center;
+    margin-left: 94%;
+}
+
+.userAddButton{
+    width: 100px;
+   
+    
+}
+
+.userContainer{
+    
+    height: 225px;
+    width: 100%;
+    
+    margin-top: -10px;
+    -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+    
+}
+
+.userUpdate{
+    height: 200px;
+  
+    padding: 20px;
+   align-items:center;
+   align-self: center;
+   margin-left: 30px;
+   
+  
+    
+   display: flex;
+}
+.avatarpos{
+padding: 10px;
+padding-top: 50px;
+padding-right: 30px;
+ 
+   
+}
+.namecss{
+    display: flex;
+    flex: 3;
+    flex-direction: column;
+    padding-right: 50px;
+
+    
+  
+} 
+.namecss2{
+    display: flex;
+    flex: 3;
+    flex-direction: column;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+
+.basicinfocss{
+    
+    display: flex;
+    flex: 6;
+    flex-direction: column;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.basicinfocss2{
+    display: flex;
+    flex: 6;
+    flex-direction: column;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.basicbday{
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
+   
+}
+
+
+.asdf{
+   
+    color: teal;
+   
+}
+.uploadcsssss{
+    padding-top: 5px;
+padding-left: 25px;
+   
+}
+
+
+.userotherinfoContainer{
+    display: flex;
+     height: 70%;
+     width: 100%;
+  
+     margin-right: 30px;
+     margin-top: 10px;
+     -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+    
+  }
+  .schoolinfo{
+     
+    display: flex;
+    flex: 5;
+    flex-direction: column;
+      flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 30px;
+    margin-left: 50px;
+      
+}
+  .otherinfo{
+     
+      display: flex;
+      flex: 5;
+      flex-direction: column;
+        flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: flex-start;
+      margin: 30px;
+      
+        
+  }
+  .infoinfo{
+        
+    display: flex;
+    flex: 5;
+    flex-direction: column;
+      flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 30px;
+    margin-right: 500px;
+  }

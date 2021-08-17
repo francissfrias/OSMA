@@ -1,0 +1,17 @@
+.home{
+    flex: 10;
+    margin: 5px 10px 5px 10px;
+
+}
+
+.featuredTitleTop{
+    float: top;
+    color: darkgreen;
+    text-align: center;
+  
+}
+
+.featuredTitleBot{
+    margin-top: 10px;
+    text-align: center;
+}
