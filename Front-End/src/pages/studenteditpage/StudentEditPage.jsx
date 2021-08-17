@@ -12,6 +12,7 @@ import Avatar from "@material-ui/core/Avatar";
 import GetAppIcon from "@material-ui/icons/GetApp";
 import "../../App.js";
 import Axios from "axios";
+import { useParams } from "react-router-dom";
 
 const upload = makeStyles((theme) => ({
   root: {
@@ -54,7 +55,9 @@ const selectStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function StudentEditPage() {
+export default function StudentEditPage(props) {
+  let { id } = useParams();
+
   const [studentNumber, setStudentNumber] = useState("");
   const [lastName, setLastName] = useState("");
   const [firstName, setFirstName] = useState("");
@@ -81,57 +84,21 @@ export default function StudentEditPage() {
   const [motherName, setmotherName] = useState("");
   const [motherOccupation, setmotherOccupation] = useState("");
 
-  const [studentallList, setstudentList] = useState([]);
   useEffect(() => {
-    Axios.get("http://localhost:3001/api/get/id").then((response) => {
-      setstudentList(response.data);
+    Axios.get("http://localhost:3001/api/get/" + id).then((response) => {
+      const { lastName, middleName } = response.data[0];
+
+      setmiddleName(middleName);
+      setLastName(lastName);
     });
-  }, []);
+  }, [id]);
 
-  // const getStudentById = (id) => {
-  //   const { match: { params } } = this.props;
-
-  //   Axios.get(`/api/get/id/${params.userId}`)
-  //     .then(({ data: user }) => {
-  //       console.log('user', user);
-
-  //       this.setState({ user });
-  //     });
-  // }
-
-  const updateReview = (id) => {
-    console.log("ID: " + typeof id + " Value: " + id);
+  const updateReview = () => {
     Axios.put(`http://localhost:3001/api/update/${id}`, {
-      studentNumber: studentNumber,
-      lastName: lastName,
-      firstName: firstName,
-      middleName: middleName,
-      email: email,
-      age: age,
-      birthday: birthday,
-      yearStarted: yearStarted,
-      course: course,
-      yearNumber: yearNumber,
-      section: section,
-      currentYear: currentYear,
-      gender: gender,
-      phoneNumber: phoneNumber,
-      telephoneNumber: telephoneNumber,
-      primaryAddress: primaryAddress,
-      province: province,
-      city: city,
-      villageorbarangay: villageorbarangay,
-      zipcode: zipcode,
-      highschoolName: highschoolName,
-      highschoolAddress: highschoolAddress,
-      highschoolYearGraduated: highschoolYearGraduated,
-      elementaryName: elementaryName,
-      elementaryAddress: elementaryAddress,
-      elementaryYearGraduated: elementaryYearGraduated,
-      fatherName: fatherName,
-      fatherOccupation: fatherOccupation,
-      motherName: motherName,
-      motherOccupation: motherOccupation,
+      lastName,
+      middleName,
+    }).then((res) => {
+      console.log(res);
     });
   };
 
@@ -213,17 +180,19 @@ export default function StudentEditPage() {
             </form>
             <form className={classes.root} noValidate autoComplete="off">
               <TextField
-                id="lastName"
+                id="middleName"
                 label="Middle Initial"
+                value={middleName || ""}
                 onChange={(e) => {
                   setmiddleName(e.target.value);
                 }}
-              />{" "}
+              />
             </form>
             <form className={classes.root} noValidate autoComplete="off">
               <TextField
                 id="standard-basic"
                 label="Last Name"
+                value={lastName || ""}
                 onChange={(e) => {
                   setLastName(e.target.value);
                 }}

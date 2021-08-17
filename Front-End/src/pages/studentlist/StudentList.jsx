@@ -10,7 +10,7 @@ import Button from "@material-ui/core/Button";
 import "../../App.js";
 import Axios from "axios";
 
-export default function StudentList() {
+export default function StudentList(props) {
   const [studentallList, setstudentList] = useState([]);
   useEffect(() => {
     Axios.get("http://localhost:3001/api/get").then((response) => {
@@ -93,7 +93,7 @@ export default function StudentList() {
         return (
           <Link
             to={{
-              pathname: "/student/edit?id=" + studentallList.id,
+              pathname: "/student/edit/" + studentallList.id,
             }}
           >
             <IconButton

@@ -25,7 +25,7 @@ function App() {
             <StudentList />
           </Route>
 
-          <Route path="/student/:id">
+          <Route path="/student/edit/:id">
             <StudentEditPage />
           </Route>
 
