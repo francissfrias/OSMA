@@ -1,40 +1,37 @@
-.studentlist{
-    flex: 10;
-    margin: 5px 10px 5px 10px;
+.studentlist {
+  flex: 10;
+  margin: 5px 10px 5px 10px;
 }
-.userlistDelete{
-    color:red;
-    background-color: red;
-}
-
-
-
-
-
-
-
-
-
-.addstudent{
-    height: 40px;
-    width: 100px;
-    margin-bottom: 10px;
-    margin-left: 1575px;
-    align-items: center;
-    justify-content: space-between;
+.userlistDelete {
+  color: red;
+  background-color: red;
 }
 
-.userAddupdateButton{
-    height: 40px;
-    width: 150px;
-   
-   
-    
+.dialog {
+  background-color: teal;
 }
-.viewgrade{
-    
-    background-color: teal;
-    color: white;
-   
-    
+
+.addbuttons {
+  margin-right: 5px;
+}
+
+.userAddupdateButton {
+  height: 30px;
+  width: 120px;
+  padding-right: 10px;
+}
+.viewgrade {
+  background-color: teal;
+  color: white;
+}
+.export {
+  height: 30px;
+  width: 100px;
+}
+.division1 {
+  padding-right: 86.5%;
+}
+
+.division {
+  padding-right: 10px;
 }
